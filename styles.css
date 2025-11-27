@@ -1,0 +1,164 @@
+:root {
+  --primary-bg: oklch(79.2% 0.209 151.711); /* vert neutre */
+  --primary-color: oklch(72.3% 0.219 149.579);
+  --main-fonts: "Inter", Arial, Helvetica, sans-serif;
+  --gap-home: 5vh;
+  --info-color: oklch(68.5% 0.169 237.323);
+  --info-bg-color: oklch(95.1% 0.026 236.824);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-fonts);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 36px;
+}
+
+header {
+  display: flex;
+  background-color: var(--primary-bg);
+  justify-content: space-around;
+  padding: 10px 0px;
+}
+
+#menu {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  gap: 3vw;
+  align-items: center;
+}
+
+#menu > li {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#logo {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#subtitle,
+#map {
+  color: black;
+  font-size: 24px;
+}
+
+#box-map {
+  display: flex;
+  gap: 6px;
+}
+
+#map {
+  font-weight: 700;
+}
+
+main > * {
+  margin-bottom: var(--gap-home);
+}
+
+#landing {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-home);
+  padding-top: var(--gap-home);
+}
+
+footer {
+  background-color: var(--primary-bg);
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#methods {
+  padding: 20px;
+  background-color: oklch(92.5% 0.084 155.995);
+  border: 4px solid oklch(79.2% 0.209 151.711);
+  border-radius: 20px;
+}
+
+#methods > ul {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+#methods > ul > li {
+  font-size: 18px;
+}
+
+footer > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#personnes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#personnes > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 22px;
+  list-style: none;
+}
+
+#personnes > ul > li {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+#personnes > h2 {
+  font-size: 26px;
+}
+
+#info_dev {
+  padding: 20px;
+  color: var(--info-color);
+  background-color: var(--info-bg-color);
+  border: 2px solid var(--info-color);
+  font-size: 20px;
+  border-radius: 10px;
+}
