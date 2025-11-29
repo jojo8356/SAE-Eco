@@ -1,10 +1,10 @@
 :root {
-  --primary-bg: oklch(79.2% 0.209 151.711); /* vert neutre */
-  --primary-color: oklch(72.3% 0.219 149.579);
+  --primary-bg: #05df72;
+  --primary-color: #00c951;
   --main-fonts: "Inter", Arial, Helvetica, sans-serif;
   --gap-home: 5vh;
-  --info-color: oklch(68.5% 0.169 237.323);
-  --info-bg-color: oklch(95.1% 0.026 236.824);
+  --info-color: #00a6f4;
+  --info-bg-color: #dff2fe;
 }
 
 *,
@@ -99,7 +99,7 @@ footer {
 #methods {
   padding: 20px;
   background-color: oklch(92.5% 0.084 155.995);
-  border: 4px solid oklch(79.2% 0.209 151.711);
+  border: 4px solid var(--primary-bg);
   border-radius: 20px;
 }
 
@@ -161,4 +161,44 @@ footer > ul {
   border: 2px solid var(--info-color);
   font-size: 20px;
   border-radius: 10px;
+}
+
+#questionnaire{
+    background-color: rgba(0, 201, 81, 0.4);
+}
+
+#questionnaire > h1{
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px 20px;
+    margin-top: var(--gap-home);
+    border-top: 8px solid var(--primary-bg); 
+}
+
+.question{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap: 10px;
+    border-radius: 8px;
+}
+
+.question > h2{
+    justify-self: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+}
+
+.question_checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
