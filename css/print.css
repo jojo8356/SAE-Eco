@@ -1,0 +1,226 @@
+/* ===========================================
+   FEUILLE DE STYLE POUR L'IMPRESSION
+   Fichier: print.css
+   Description: Styles optimisés pour l'impression
+   du site "Nice Green" sur les transports à Nice
+   =========================================== */
+
+/* --- RESET POUR L'IMPRESSION --- */
+/* Suppression des couleurs de fond et optimisation pour le papier */
+* {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+/* --- TYPOGRAPHIE --- */
+/* Police lisible et taille adaptée au papier */
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 24pt;
+    margin-bottom: 10pt;
+    border-bottom: 2px solid black;
+    padding-bottom: 5pt;
+}
+
+h2 {
+    font-size: 16pt;
+    margin-top: 15pt;
+    margin-bottom: 8pt;
+}
+
+/* --- MASQUER LES ELEMENTS NON NECESSAIRES A L'IMPRESSION --- */
+/* Le menu de navigation n'est pas utile sur papier */
+header {
+    display: block !important;
+    padding: 10pt 0;
+    border-bottom: 1px solid black;
+}
+
+#menu {
+    display: none !important;
+}
+
+#logo {
+    font-size: 18pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- LIENS --- */
+/* Afficher l'URL des liens entre parenthèses pour le papier */
+a {
+    text-decoration: underline !important;
+}
+
+a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    font-style: italic;
+}
+
+/* Ne pas afficher l'URL pour les liens internes */
+a[href^="#"]:after,
+a[href^="./"]:after {
+    content: "";
+}
+
+/* --- MISE EN PAGE PRINCIPALE --- */
+main {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+main > * {
+    margin-bottom: 15pt;
+}
+
+/* --- PAGE D'ACCUEIL --- */
+#landing {
+    display: block !important;
+    padding: 0 !important;
+}
+
+#landing img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 10pt auto;
+}
+
+#box-map {
+    display: block !important;
+}
+
+#methods {
+    border: 1px solid black !important;
+    padding: 10pt !important;
+    border-radius: 0 !important;
+    margin: 15pt 0;
+}
+
+#personnes {
+    border: 1px solid black !important;
+    padding: 10pt !important;
+    border-radius: 0 !important;
+    margin: 15pt 0;
+}
+
+#personnes > ul {
+    display: block !important;
+}
+
+#personnes > ul > li {
+    text-decoration: none !important;
+    margin-bottom: 5pt;
+}
+
+#info_dev {
+    border: 1px solid black !important;
+    padding: 10pt !important;
+    border-radius: 0 !important;
+}
+
+/* --- QUESTIONNAIRE --- */
+#questionnaire {
+    padding: 0 !important;
+}
+
+#questionnaire > h1 {
+    border: none !important;
+    border-bottom: 2px solid black !important;
+    border-radius: 0 !important;
+    padding: 10pt 0 !important;
+    margin: 0 0 15pt 0 !important;
+}
+
+.question {
+    width: 100% !important;
+    border: 1px solid black !important;
+    border-radius: 0 !important;
+    padding: 10pt !important;
+    margin-bottom: 15pt;
+    page-break-inside: avoid;
+}
+
+.question > h2 {
+    margin-left: 0 !important;
+    font-weight: bold;
+}
+
+.question_checkbox {
+    display: flex !important;
+    align-items: center;
+    gap: 8pt;
+    margin: 5pt 0;
+}
+
+/* Cases à cocher visibles à l'impression */
+input[type="radio"],
+input[type="checkbox"] {
+    width: 12pt !important;
+    height: 12pt !important;
+    border: 1px solid black !important;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+/* --- PIED DE PAGE --- */
+footer {
+    display: block !important;
+    border-top: 1px solid black;
+    padding-top: 10pt;
+    margin-top: 20pt;
+}
+
+footer > ul {
+    display: block !important;
+    text-align: center;
+}
+
+footer > ul > li {
+    display: inline;
+}
+
+footer > ul > li:not(:last-child):after {
+    content: " • ";
+}
+
+/* --- GESTION DES SAUTS DE PAGE --- */
+/* Eviter les coupures au milieu des éléments importants */
+h1, h2 {
+    page-break-after: avoid;
+}
+
+.question,
+#methods,
+#personnes,
+#info_dev {
+    page-break-inside: avoid;
+}
+
+/* --- MARGES DE PAGE --- */
+@page {
+    margin: 2cm;
+}
+
+/* --- IMAGES --- */
+img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+}

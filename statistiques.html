@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <!-- Feuille de style pour l'impression -->
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <title>Statistiques</title>
+    <!-- Police Google Fonts Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ==================== EN-TÊTE ==================== -->
+    <header>
+      <!-- Logo du site -->
+      <p id="logo">Nice Green</p>
+      <!-- Menu de navigation principal -->
+      <ul id="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="questionnaire.html">Questionnaire</a></li>
+        <li><a href="statistiques.html">Statistiques</a></li>
+        <li><a href="#">Analyse</a></li>
+        <li><a href="#">Réponses</a></li>
+      </ul>
+    </header>
+
+    <!-- ==================== CONTENU PRINCIPAL ==================== -->
+    <main id="stats-page">
+      <!-- Wrapper centré à 70% -->
+      <div class="stats-wrapper">
+        <h1>Résultats de l'enquête</h1>
+
+        <!-- Compteur total -->
+        <div class="stats-total">
+        <span class="stats-number">384</span>
+        <span class="stats-label">réponses collectées</span>
+      </div>
+
+      <!-- ========== SECTION A : Répartition des répondants ========== -->
+      <section class="stats-section">
+        <h2>A) Répartition des répondants</h2>
+
+        <!-- Statut -->
+        <div class="stats-card">
+          <h3>Statut</h3>
+          <div class="stats-bar-container">
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">Un habitant de Nice</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 51.3%;"></div>
+              </div>
+              <span class="stats-bar-value">51.3%</span>
+            </div>
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">Un touriste / visiteur</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 48.7%;"></div>
+              </div>
+              <span class="stats-bar-value">48.7%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tranche d'âge -->
+        <div class="stats-card">
+          <h3>Tranche d'âge</h3>
+          <div class="stats-bar-container">
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">26–40 ans</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 29.95%;"></div>
+              </div>
+              <span class="stats-bar-value">29.95%</span>
+            </div>
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">18–25 ans</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 23.44%;"></div>
+              </div>
+              <span class="stats-bar-value">23.44%</span>
+            </div>
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">41–60 ans</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 23.44%;"></div>
+              </div>
+              <span class="stats-bar-value">23.44%</span>
+            </div>
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">Moins de 18 ans</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 23.18%;"></div>
+              </div>
+              <span class="stats-bar-value">23.18%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Situation -->
+        <div class="stats-card">
+          <h3>Situation</h3>
+          <div class="stats-bar-container">
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">Sans emploi</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 26.82%;"></div>
+              </div>
+              <span class="stats-bar-value">26.82%</span>
+            </div>
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">Salarié</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 26.3%;"></div>
+              </div>
+              <span class="stats-bar-value">26.3%</span>
+            </div>
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">Retraité</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 25.26%;"></div>
+              </div>
+              <span class="stats-bar-value">25.26%</span>
+            </div>
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">Étudiant</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 21.61%;"></div>
+              </div>
+              <span class="stats-bar-value">21.61%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION B : Fréquence des déplacements ========== -->
+      <section class="stats-section">
+        <h2>B) Fréquence des déplacements</h2>
+        <div class="stats-card">
+          <div class="stats-bar-container">
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">Rarement</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 29.69%;"></div>
+              </div>
+              <span class="stats-bar-value">29.69%</span>
+            </div>
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">Tous les jours</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 25.52%;"></div>
+              </div>
+              <span class="stats-bar-value">25.52%</span>
+            </div>
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">Plusieurs fois par semaine</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 22.92%;"></div>
+              </div>
+              <span class="stats-bar-value">22.92%</span>
+            </div>
+            <div class="stats-bar-item">
+              <span class="stats-bar-label">Occasionnellement</span>
+              <div class="stats-bar">
+                <div class="stats-bar-fill" style="width: 21.88%;"></div>
+              </div>
+              <span class="stats-bar-value">21.88%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION C : Transports les plus utilisés ========== -->
+      <section class="stats-section">
+        <h2>C) Transports les plus utilisés</h2>
+        <div class="stats-card">
+          <div class="stats-ranking">
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">1</span>
+              <span class="stats-rank-label">Voiture en autopartage</span>
+              <span class="stats-rank-value">131</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">2</span>
+              <span class="stats-rank-label">Train</span>
+              <span class="stats-rank-value">128</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">3</span>
+              <span class="stats-rank-label">Marche à pied</span>
+              <span class="stats-rank-value">122</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">4</span>
+              <span class="stats-rank-label">Bus</span>
+              <span class="stats-rank-value">121</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">5</span>
+              <span class="stats-rank-label">Vélo</span>
+              <span class="stats-rank-value">119</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">5</span>
+              <span class="stats-rank-label">Tram</span>
+              <span class="stats-rank-value">119</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">7</span>
+              <span class="stats-rank-label">Voiture personnelle</span>
+              <span class="stats-rank-value">114</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">8</span>
+              <span class="stats-rank-label">Trottinette électrique personnelle</span>
+              <span class="stats-rank-value">104</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">9</span>
+              <span class="stats-rank-label">Vélo en libre-service</span>
+              <span class="stats-rank-value">98</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">10</span>
+              <span class="stats-rank-label">Trottinette en libre-service</span>
+              <span class="stats-rank-value">96</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION D : Niveau de satisfaction ========== -->
+      <section class="stats-section">
+        <h2>D) Niveau de satisfaction</h2>
+        <div class="stats-card">
+          <div class="stats-grid">
+            <div class="stats-grid-item stats-positive">
+              <span class="stats-grid-value">26.82%</span>
+              <span class="stats-grid-label">Très satisfaisante</span>
+            </div>
+            <div class="stats-grid-item stats-neutral">
+              <span class="stats-grid-value">23.96%</span>
+              <span class="stats-grid-label">Satisfaisante</span>
+            </div>
+            <div class="stats-grid-item stats-warning">
+              <span class="stats-grid-value">24.22%</span>
+              <span class="stats-grid-label">Insatisfaisante</span>
+            </div>
+            <div class="stats-grid-item stats-negative">
+              <span class="stats-grid-value">25.0%</span>
+              <span class="stats-grid-label">Très insatisfaisante</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION E : Problèmes rencontrés ========== -->
+      <section class="stats-section">
+        <h2>E) Problèmes rencontrés</h2>
+        <div class="stats-card">
+          <div class="stats-ranking">
+            <div class="stats-rank-item stats-problem">
+              <span class="stats-rank-position">1</span>
+              <span class="stats-rank-label">Pollution</span>
+              <span class="stats-rank-value">109</span>
+            </div>
+            <div class="stats-rank-item stats-problem">
+              <span class="stats-rank-position">2</span>
+              <span class="stats-rank-label">Retards</span>
+              <span class="stats-rank-value">107</span>
+            </div>
+            <div class="stats-rank-item stats-problem">
+              <span class="stats-rank-position">3</span>
+              <span class="stats-rank-label">Fréquence insuffisante</span>
+              <span class="stats-rank-value">104</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">4</span>
+              <span class="stats-rank-label">Aucun problème</span>
+              <span class="stats-rank-value">98</span>
+            </div>
+            <div class="stats-rank-item stats-problem">
+              <span class="stats-rank-position">4</span>
+              <span class="stats-rank-label">Trop de monde</span>
+              <span class="stats-rank-value">98</span>
+            </div>
+            <div class="stats-rank-item stats-problem">
+              <span class="stats-rank-position">6</span>
+              <span class="stats-rank-label">Difficulté d'accès (PMR, horaires)</span>
+              <span class="stats-rank-value">90</span>
+            </div>
+            <div class="stats-rank-item stats-problem">
+              <span class="stats-rank-position">7</span>
+              <span class="stats-rank-label">Prix trop élevé</span>
+              <span class="stats-rank-value">89</span>
+            </div>
+            <div class="stats-rank-item stats-problem">
+              <span class="stats-rank-position">8</span>
+              <span class="stats-rank-label">Manque de sécurité</span>
+              <span class="stats-rank-value">82</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION F : Acceptation transports non polluants ========== -->
+      <section class="stats-section">
+        <h2>F) Acceptation des transports non polluants</h2>
+        <div class="stats-card">
+          <div class="stats-grid">
+            <div class="stats-grid-item stats-positive">
+              <span class="stats-grid-value">26.82%</span>
+              <span class="stats-grid-label">Oui absolument</span>
+            </div>
+            <div class="stats-grid-item stats-neutral">
+              <span class="stats-grid-value">21.61%</span>
+              <span class="stats-grid-label">Plutôt oui</span>
+            </div>
+            <div class="stats-grid-item stats-warning">
+              <span class="stats-grid-value">24.74%</span>
+              <span class="stats-grid-label">Plutôt non</span>
+            </div>
+            <div class="stats-grid-item stats-negative">
+              <span class="stats-grid-value">26.82%</span>
+              <span class="stats-grid-label">Non</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION G : Améliorations souhaitées ========== -->
+      <section class="stats-section">
+        <h2>G) Améliorations souhaitées</h2>
+        <div class="stats-card">
+          <div class="stats-ranking stats-improvements">
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">1</span>
+              <span class="stats-rank-label">Information plus claire</span>
+              <span class="stats-rank-value">146</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">2</span>
+              <span class="stats-rank-label">Tarifs plus bas</span>
+              <span class="stats-rank-value">130</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">3</span>
+              <span class="stats-rank-label">Meilleure sécurité</span>
+              <span class="stats-rank-value">129</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">4</span>
+              <span class="stats-rank-label">Plus de vélos / trottinettes disponibles</span>
+              <span class="stats-rank-value">127</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">5</span>
+              <span class="stats-rank-label">Plus de stations / bornes</span>
+              <span class="stats-rank-value">120</span>
+            </div>
+            <div class="stats-rank-item">
+              <span class="stats-rank-position">6</span>
+              <span class="stats-rank-label">Plus de pistes cyclables</span>
+              <span class="stats-rank-value">117</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      </div>
+    </main>
+
+    <!-- ==================== PIED DE PAGE ==================== -->
+    <footer>
+      <!-- Liste des membres de l'équipe -->
+      <ul>
+        <li>Polsinelli Johan</li>
+        <li>Meefoumane Nzame Murielle</li>
+        <li>RAHARISON Leong Yao Sing Yann</li>
+        <li>Gakaeva Amina</li>
+        <li>BASTRYHA Iryna</li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1200 @@
+/* ===========================================
+   FEUILLE DE STYLE PRINCIPALE
+   Site : Nice Green - Transports non polluants à Nice
+   Auteurs : Groupe SAE S106
+   =========================================== */
+
+/* --- VARIABLES CSS --- */
+/* Définition des couleurs et polices utilisées sur tout le site */
+:root {
+  --primary-bg: #05df72;           /* Couleur de fond principale (vert vif) */
+  --primary-color: #00c951;        /* Couleur principale pour les accents */
+  --main-fonts: "Inter", Arial, Helvetica, sans-serif;  /* Police principale */
+  --gap-home: 5vh;                 /* Espacement standard entre sections */
+  --info-color: #00a6f4;           /* Couleur pour les encarts informatifs (bleu) */
+  --info-bg-color: #dff2fe;        /* Fond des encarts informatifs */
+}
+
+/* --- RESET CSS --- */
+/* Réinitialisation des styles par défaut du navigateur */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;         /* Inclut padding et border dans la largeur */
+  font-family: var(--main-fonts);
+}
+
+/* --- STYLES GLOBAUX --- */
+/* Style par défaut pour tous les liens */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Titre principal */
+h1 {
+  color: var(--primary-color);
+  font-size: 36px;
+}
+
+/* --- EN-TÊTE (HEADER) --- */
+/* Barre de navigation en haut de page */
+header {
+  display: flex;
+  background-color: var(--primary-bg);
+  justify-content: space-around;  /* Espace uniforme entre logo et menu */
+  padding: 10px 0px;
+}
+
+/* Menu de navigation horizontal */
+#menu {
+  display: flex;
+  list-style-type: none;          /* Supprime les puces */
+  justify-content: space-between;
+  gap: 3vw;                       /* Espacement responsive entre items */
+  align-items: center;
+}
+
+/* Items du menu */
+#menu > li {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* Logo du site */
+#logo {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 800;               /* Gras pour le logo */
+}
+
+/* --- CONTENU PRINCIPAL (MAIN) --- */
+/* Conteneur principal centré en colonne */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Espacement entre chaque section du main */
+main > * {
+  margin-bottom: var(--gap-home);
+}
+
+/* ===========================================
+   STYLES DE LA PAGE D'ACCUEIL MODERNE
+   =========================================== */
+
+/* Page d'accueil */
+.home-page {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.home-page > * {
+  margin-bottom: 0;
+}
+
+/* --- SECTION HERO --- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #166534;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* --- BOUTONS --- */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-bg), var(--primary-color));
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* --- SECTION FEATURES --- */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 10%;
+  background: white;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* --- SECTION MÉTHODES --- */
+.methods-section {
+  padding: 60px 10%;
+  background: #f8faf9;
+  text-align: center;
+  width: 100%;
+}
+
+.methods-section h2 {
+  color: var(--primary-color);
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.method-item {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.method-item:hover {
+  transform: translateY(-5px);
+}
+
+.method-number {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary-bg);
+  margin-bottom: 15px;
+}
+
+.method-item h4 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.method-item p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* --- SECTION CARTE --- */
+.map-section {
+  padding: 60px 10%;
+  background: linear-gradient(135deg, var(--primary-bg), var(--primary-color));
+  text-align: center;
+  width: 100%;
+}
+
+.map-content h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.map-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.map-section .btn-primary {
+  background: white;
+  color: var(--primary-color);
+}
+
+.map-section .btn-primary:hover {
+  background: #f0fdf4;
+}
+
+/* --- SECTION ÉQUIPE --- */
+.team-section {
+  padding: 60px 10%;
+  text-align: center;
+  width: 100%;
+  background: white;
+}
+
+.team-section h2 {
+  color: var(--primary-color);
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.member-avatar {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-bg), var(--primary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-avatar {
+  transform: scale(1.1);
+}
+
+.member-name {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 150px;
+  text-align: center;
+}
+
+/* --- BANDEAU CRÉATEUR --- */
+.creator-banner {
+  width: 100%;
+  padding: 40px 10%;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.creator-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.creator-icon {
+  font-size: 40px;
+}
+
+.creator-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.creator-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.creator-name {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* --- ANCIEN STYLE MÉTHODES (conservé pour compatibilité) --- */
+#methods {
+  padding: 20px;
+  background-color: oklch(92.5% 0.084 155.995);
+  border: 4px solid var(--primary-bg);
+  border-radius: 20px;
+}
+
+/* Liste des méthodes */
+#methods > ul {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Style global des listes à puces */
+ul {
+  list-style-position: inside;    /* Puces à l'intérieur du conteneur */
+}
+
+/* Taille du texte des méthodes */
+#methods > ul > li {
+  font-size: 18px;
+}
+
+/* --- SECTION ÉQUIPE --- */
+/* Encart présentant les membres du projet */
+#personnes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* Liste des membres */
+#personnes > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 22px;
+  list-style: none;               /* Pas de puces */
+}
+
+/* Noms des membres soulignés */
+#personnes > ul > li {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;     /* Espace entre texte et soulignement */
+}
+
+/* Titre de la section équipe */
+#personnes > h2 {
+  font-size: 26px;
+}
+
+/* --- ENCART INFORMATIF --- */
+/* Message informatif en bleu */
+#info_dev {
+  padding: 20px;
+  color: var(--info-color);
+  background-color: var(--info-bg-color);
+  border: 2px solid var(--info-color);
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+/* --- PIED DE PAGE (FOOTER) --- */
+/* Barre de pied de page */
+footer {
+  background-color: var(--primary-bg);
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Liste horizontale dans le footer */
+footer > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* ===========================================
+   STYLES SPÉCIFIQUES AU QUESTIONNAIRE
+   =========================================== */
+
+/* Fond de la page questionnaire */
+#questionnaire {
+  background-color: rgba(0, 201, 81, 0.4);  /* Vert transparent */
+}
+
+/* Titre du questionnaire */
+#questionnaire > h1 {
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px 20px;
+  margin-top: var(--gap-home);
+  border-top: 8px solid var(--primary-bg);  /* Accent vert en haut */
+}
+
+/* --- CARTES DE QUESTIONS --- */
+/* Chaque question est dans une carte blanche */
+.question {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;                    /* 50% de la largeur de l'écran */
+  gap: 10px;
+  border-radius: 8px;
+}
+
+/* Titre de chaque question */
+.question > h2 {
+  justify-self: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+/* --- INPUTS (RADIO ET CHECKBOX) --- */
+/* Taille des cases à cocher et boutons radio */
+input[type="radio"],
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+/* Conteneur d'une option (input + label) */
+.question_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   Adaptation du site aux différentes tailles d'écran
+   =========================================== */
+
+/* --- TABLETTES (max 1024px) --- */
+@media screen and (max-width: 1024px) {
+  /* Réduction de la taille du titre */
+  h1 {
+    font-size: 28px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* Menu : espacement réduit */
+  #menu {
+    gap: 2vw;
+  }
+
+  #menu > li {
+    font-size: 16px;
+  }
+
+  /* Logo plus petit */
+  #logo {
+    font-size: 22px;
+  }
+
+  /* Questions plus larges sur tablette */
+  .question {
+    width: 70vw;
+  }
+
+  /* Footer : texte plus petit */
+  footer {
+    font-size: 16px;
+  }
+
+  footer > ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  /* --- PAGE ACCUEIL TABLETTE --- */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    max-width: 80%;
+  }
+
+  .methods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    gap: 20px;
+  }
+}
+
+/* --- SMARTPHONES (max 768px) --- */
+@media screen and (max-width: 768px) {
+  /* Header en colonne */
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+  }
+
+  /* Menu vertical sur mobile */
+  #menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #menu > li {
+    font-size: 18px;
+  }
+
+  /* Titre principal adapté */
+  h1 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  /* Sous-titre et lien carte */
+  #subtitle,
+  #map {
+    font-size: 18px;
+  }
+
+  /* Box map en colonne */
+  #box-map {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Image responsive */
+  #landing img {
+    max-width: 90vw;
+    height: auto;
+  }
+
+  /* Sections pleine largeur */
+  #methods,
+  #personnes,
+  #info_dev {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  /* Questions pleine largeur sur mobile */
+  .question {
+    width: 90vw;
+  }
+
+  /* Titre questionnaire */
+  #questionnaire > h1 {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-align: center;
+  }
+
+  /* Footer en colonne */
+  footer > ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  /* --- PAGE ACCUEIL SMARTPHONE --- */
+  .hero {
+    padding: 30px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .features {
+    padding: 40px 5%;
+  }
+
+  .feature-card {
+    min-width: 100%;
+  }
+
+  .methods-section {
+    padding: 40px 5%;
+  }
+
+  .methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .methods-section h2,
+  .team-section h2,
+  .map-content h2 {
+    font-size: 24px;
+  }
+
+  .map-section {
+    padding: 40px 5%;
+  }
+
+  .team-section {
+    padding: 40px 5%;
+  }
+
+  .member-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .member-name {
+    font-size: 12px;
+  }
+
+  /* Bandeau créateur */
+  .creator-banner {
+    padding: 0px 5%;
+  }
+
+  .creator-content {
+    padding: 0px;
+    gap: 15px;
+  }
+
+  .creator-icon {
+    font-size: 32px;
+  }
+
+  .creator-label {
+    font-size: 12px;
+  }
+
+  .creator-name {
+    font-size: 18px;
+  }
+}
+
+/* --- PETITS SMARTPHONES (max 480px) --- */
+@media screen and (max-width: 480px) {
+  /* Titre encore plus petit */
+  h1 {
+    font-size: 20px;
+  }
+
+  /* Logo compact */
+  #logo {
+    font-size: 20px;
+  }
+
+  /* Menu compact */
+  #menu > li {
+    font-size: 16px;
+  }
+
+  /* Textes réduits */
+  #subtitle,
+  #map {
+    font-size: 16px;
+  }
+
+  #methods > ul > li {
+    font-size: 16px;
+  }
+
+  #personnes > ul {
+    font-size: 18px;
+  }
+
+  #personnes > h2 {
+    font-size: 22px;
+  }
+
+  #info_dev {
+    font-size: 16px;
+  }
+
+  /* Questions : padding réduit */
+  .question {
+    padding: 15px;
+    width: 95vw;
+  }
+
+  .question > h2 {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  /* Inputs légèrement plus petits */
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Labels */
+  .question_checkbox label {
+    font-size: 14px;
+  }
+}
+
+/* ===========================================
+   STYLES SPÉCIFIQUES À LA PAGE STATISTIQUES
+   =========================================== */
+
+/* --- PAGE STATISTIQUES --- */
+#stats-page {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Wrapper centré à 70% de la largeur */
+.stats-wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats-wrapper > h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* --- COMPTEUR TOTAL --- */
+/* Grand compteur de réponses en haut de page */
+.stats-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background: linear-gradient(135deg, var(--primary-bg), var(--primary-color));
+  border-radius: 20px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.stats-number {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stats-label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* --- SECTIONS DE STATISTIQUES --- */
+.stats-section {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.stats-section > h2 {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--primary-bg);
+}
+
+/* --- CARTES DE STATISTIQUES --- */
+.stats-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.stats-card > h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+/* --- BARRES DE PROGRESSION --- */
+.stats-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stats-bar-item {
+  display: grid;
+  grid-template-columns: 200px 1fr 70px;
+  align-items: center;
+  gap: 15px;
+}
+
+.stats-bar-label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.stats-bar {
+  height: 25px;
+  background-color: #e8f5e9;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.stats-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-bg), var(--primary-color));
+  border-radius: 12px;
+  transition: width 0.5s ease;
+}
+
+.stats-bar-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: right;
+}
+
+/* --- CLASSEMENTS (RANKINGS) --- */
+.stats-ranking {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stats-rank-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats-rank-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stats-rank-position {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, var(--primary-bg), var(--primary-color));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.stats-rank-label {
+  flex: 1;
+  font-size: 15px;
+  color: #333;
+}
+
+.stats-rank-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-left: 15px;
+}
+
+/* Style spécial pour les problèmes */
+.stats-rank-item.stats-problem {
+  background-color: #fff5f5;
+}
+
+.stats-rank-item.stats-problem .stats-rank-position {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+}
+
+.stats-rank-item.stats-problem .stats-rank-value {
+  color: #ee5a5a;
+}
+
+/* Style pour les améliorations */
+.stats-improvements .stats-rank-item {
+  background-color: #e8f5e9;
+}
+
+/* --- GRILLE DE SATISFACTION --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.stats-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.stats-grid-value {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.stats-grid-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Couleurs pour les différents niveaux */
+.stats-positive {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.stats-neutral {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.stats-warning {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.stats-negative {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* ===========================================
+   RESPONSIVE POUR LA PAGE STATISTIQUES
+   =========================================== */
+
+@media screen and (max-width: 1024px) {
+  /* Grille satisfaction sur 2 colonnes */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Barres : label au-dessus */
+  .stats-bar-item {
+    grid-template-columns: 1fr 60px;
+    grid-template-rows: auto auto;
+  }
+
+  .stats-bar-label {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Wrapper plus large sur tablette/mobile */
+  .stats-wrapper {
+    width: 90%;
+  }
+
+  /* Compteur total plus petit */
+  .stats-number {
+    font-size: 48px;
+  }
+
+  .stats-label {
+    font-size: 16px;
+  }
+
+  /* Titres de section */
+  .stats-section > h2 {
+    font-size: 20px;
+  }
+
+  /* Cartes */
+  .stats-card {
+    padding: 15px;
+  }
+
+  /* Rankings */
+  .stats-rank-item {
+    flex-wrap: wrap;
+  }
+
+  .stats-rank-label {
+    font-size: 14px;
+  }
+
+  .stats-rank-value {
+    font-size: 16px;
+  }
+
+  /* Grille satisfaction */
+  .stats-grid-value {
+    font-size: 24px;
+  }
+
+  .stats-grid-label {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Wrapper pleine largeur sur petit mobile */
+  .stats-wrapper {
+    width: 95%;
+  }
+
+  /* Page stats */
+  #stats-page {
+    padding: 10px;
+  }
+
+  /* Compteur */
+  .stats-total {
+    padding: 20px;
+  }
+
+  .stats-number {
+    font-size: 40px;
+  }
+
+  /* Grille en 1 colonne */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid-item {
+    padding: 15px;
+  }
+
+  /* Rankings compacts */
+  .stats-rank-position {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .stats-rank-label {
+    font-size: 13px;
+  }
+
+  .stats-rank-value {
+    font-size: 14px;
+  }
+}

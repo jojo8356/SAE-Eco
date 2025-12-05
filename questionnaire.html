@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-    <title>Accueil</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <!-- Feuille de style pour l'impression -->
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <title>Questionnaire</title>
     <!--Fonts-->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
@@ -15,9 +17,9 @@
     <header>
       <p id="logo">Nice Green</p>
       <ul id="menu">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Questionnaire</a></li>
-        <li><a href="#">Statistiques</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="questionnaire.html">Questionnaire</a></li>
+        <li><a href="statistiques.html">Statistiques</a></li>
         <li><a href="#">Analyse</a></li>
         <li><a href="#">Réponses</a></li>
       </ul>
@@ -25,288 +27,308 @@
     <main id="questionnaire">
       <h1>Mobilité et Transports à Nice</h1>
 
+      <!-- Question 1 : Statut -->
       <div class="question">
         <h2>Vous êtes :</h2>
         <div class="question_checkbox">
-          <input type="radio" name="0" />
-          <label for="">Un habitant de Nice</label>
+          <input type="radio" name="statut" id="statut-habitant" />
+          <label for="statut-habitant">Un habitant de Nice</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="0"/>
-          <label for="">Un touriste / visiteur</label>
+          <input type="radio" name="statut" id="statut-touriste" />
+          <label for="statut-touriste">Un touriste / visiteur</label>
         </div>
       </div>
 
+      <!-- Question 2 : Tranche d'âge -->
       <div class="question">
         <h2>Tranche d'âge :</h2>
         <div class="question_checkbox">
-          <input type="radio" name="1"/>
-          <label for="">Moins de 18 ans</label>
+          <input type="radio" name="age" id="age-moins18" />
+          <label for="age-moins18">Moins de 18 ans</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="1"/>
-          <label for="">18–25 ans</label>
+          <input type="radio" name="age" id="age-18-25" />
+          <label for="age-18-25">18–25 ans</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="1"/>
-          <label for="">26–40 ans</label>
+          <input type="radio" name="age" id="age-26-40" />
+          <label for="age-26-40">26–40 ans</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="1"/>
-          <label for="">41–60 ans</label>
+          <input type="radio" name="age" id="age-41-60" />
+          <label for="age-41-60">41–60 ans</label>
         </div>
       </div>
+
+      <!-- Question 3 : Situation -->
       <div class="question">
         <h2>Votre situation principale :</h2>
         <div class="question_checkbox">
-          <input type="radio" name="2"/>
-          <label for="">Étudiant</label>
+          <input type="radio" name="situation" id="situation-etudiant" />
+          <label for="situation-etudiant">Étudiant</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="2"/>
-          <label for="">Salarié</label>
+          <input type="radio" name="situation" id="situation-salarie" />
+          <label for="situation-salarie">Salarié</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="2"/>
-          <label for="">Retraité</label>
+          <input type="radio" name="situation" id="situation-retraite" />
+          <label for="situation-retraite">Retraité</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="2"/>
-          <label for="">Sans emploi</label>
+          <input type="radio" name="situation" id="situation-sans-emploi" />
+          <label for="situation-sans-emploi">Sans emploi</label>
         </div>
       </div>
+
+      <!-- Question 4 : Fréquence de déplacement -->
       <div class="question">
         <h2>À quelle fréquence vous déplacez-vous dans Nice ?</h2>
         <div class="question_checkbox">
-          <input type="radio" name="3"/>
-          <label for="">Tous les jours</label>
+          <input type="radio" name="frequence" id="frequence-quotidien" />
+          <label for="frequence-quotidien">Tous les jours</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="3"/>
-          <label for="">Plusieurs fois par semaine</label>
+          <input type="radio" name="frequence" id="frequence-hebdo" />
+          <label for="frequence-hebdo">Plusieurs fois par semaine</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="3"/>
-          <label for="">Occasionnellement</label>
+          <input type="radio" name="frequence" id="frequence-occasionnel" />
+          <label for="frequence-occasionnel">Occasionnellement</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="3"/>
-          <label for="">Rarement</label>
+          <input type="radio" name="frequence" id="frequence-rare" />
+          <label for="frequence-rare">Rarement</label>
         </div>
       </div>
+
+      <!-- Question 5 : Moyens de transport utilisés -->
       <div class="question">
         <h2>
           Quels moyens de transport utilisez-vous le plus souvent à Nice ?
           (Cochez 3 maximum)
         </h2>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Voiture personnelle</label>
+          <input type="checkbox" id="transport-voiture" />
+          <label for="transport-voiture">Voiture personnelle</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Covoiturage</label>
+          <input type="checkbox" id="transport-covoiturage" />
+          <label for="transport-covoiturage">Covoiturage</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Bus</label>
+          <input type="checkbox" id="transport-bus" />
+          <label for="transport-bus">Bus</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Tram</label>
+          <input type="checkbox" id="transport-tram" />
+          <label for="transport-tram">Tram</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Train</label>
+          <input type="checkbox" id="transport-train" />
+          <label for="transport-train">Train</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Vélo</label>
+          <input type="checkbox" id="transport-velo" />
+          <label for="transport-velo">Vélo</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Vélo en libre-service</label>
+          <input type="checkbox" id="transport-velo-libre" />
+          <label for="transport-velo-libre">Vélo en libre-service</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Trottinette électrique personnelle</label>
+          <input type="checkbox" id="transport-trottinette" />
+          <label for="transport-trottinette">Trottinette électrique personnelle</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Trottinette en libre-service</label>
+          <input type="checkbox" id="transport-trottinette-libre" />
+          <label for="transport-trottinette-libre">Trottinette en libre-service</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Marche à pied</label>
+          <input type="checkbox" id="transport-marche" />
+          <label for="transport-marche">Marche à pied</label>
         </div>
       </div>
+
+      <!-- Question 6 : Fréquence transports en commun -->
       <div class="question">
         <h2>
           À quelle fréquence utilisez-vous les transports en commun (bus / tram)
           ?
         </h2>
         <div class="question_checkbox">
-          <input type="radio" name="4"/>
-          <label for="">Tous les jours</label>
+          <input type="radio" name="freq-tc" id="freq-tc-quotidien" />
+          <label for="freq-tc-quotidien">Tous les jours</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="4"/>
-          <label for="">Plusieurs fois par semaine</label>
+          <input type="radio" name="freq-tc" id="freq-tc-hebdo" />
+          <label for="freq-tc-hebdo">Plusieurs fois par semaine</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="4"/>
-          <label for="">Rarement</label>
+          <input type="radio" name="freq-tc" id="freq-tc-rare" />
+          <label for="freq-tc-rare">Rarement</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="4"/>
-          <label for="">Jamais</label>
+          <input type="radio" name="freq-tc" id="freq-tc-jamais" />
+          <label for="freq-tc-jamais">Jamais</label>
         </div>
       </div>
+
+      <!-- Question 7 : Raison du choix de transport -->
       <div class="question">
         <h2>
           Pourquoi utilisez-vous principalement ce(s) moyen(s) de transport ?
         </h2>
         <div class="question_checkbox">
-          <input type="radio" name="5"/>
-          <label for="">Rapidité</label>
+          <input type="radio" name="raison" id="raison-rapidite" />
+          <label for="raison-rapidite">Rapidité</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="5"/>
-          <label for="">Prix</label>
+          <input type="radio" name="raison" id="raison-prix" />
+          <label for="raison-prix">Prix</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="5"/>
-          <label for="">Simplicité / confort</label>
+          <input type="radio" name="raison" id="raison-confort" />
+          <label for="raison-confort">Simplicité / confort</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="5"/>
-          <label for="">Habitude</label>
+          <input type="radio" name="raison" id="raison-habitude" />
+          <label for="raison-habitude">Habitude</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="5"/>
-          <label for="">Environnement / pollution</label>
+          <input type="radio" name="raison" id="raison-ecologie" />
+          <label for="raison-ecologie">Environnement / pollution</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="5"/>
-          <label for="">Absence de alternatives</label>
+          <input type="radio" name="raison" id="raison-pas-choix" />
+          <label for="raison-pas-choix">Absence d'alternatives</label>
         </div>
       </div>
+
+      <!-- Question 8 : Qualité des transports en commun -->
       <div class="question">
         <h2>
-          Comment évaluez vous la qualité des transports en commun à Nice ?
+          Comment évaluez-vous la qualité des transports en commun à Nice ?
         </h2>
         <div class="question_checkbox">
-          <input type="radio" name="6"/>
-          <label for="">Très satisfaisante</label>
+          <input type="radio" name="qualite" id="qualite-tres-satisfait" />
+          <label for="qualite-tres-satisfait">Très satisfaisante</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="6"/>
-          <label for="">Satisfaisante</label>
+          <input type="radio" name="qualite" id="qualite-satisfait" />
+          <label for="qualite-satisfait">Satisfaisante</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="6"/>
-          <label for="">Insatisfaisante</label>
+          <input type="radio" name="qualite" id="qualite-insatisfait" />
+          <label for="qualite-insatisfait">Insatisfaisante</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="6"/>
-          <label for="">Très insatisfaisante</label>
+          <input type="radio" name="qualite" id="qualite-tres-insatisfait" />
+          <label for="qualite-tres-insatisfait">Très insatisfaisante</label>
         </div>
       </div>
+
+      <!-- Question 9 : Problèmes rencontrés -->
       <div class="question">
-        <h2>Quels problèmes rencontrez vous le plus souvent ?</h2>
+        <h2>Quels problèmes rencontrez-vous le plus souvent ?</h2>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Retards</label>
+          <input type="checkbox" id="probleme-retards" />
+          <label for="probleme-retards">Retards</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Prix trop élevé</label>
+          <input type="checkbox" id="probleme-prix" />
+          <label for="probleme-prix">Prix trop élevé</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Fréquence insuffisante</label>
+          <input type="checkbox" id="probleme-frequence" />
+          <label for="probleme-frequence">Fréquence insuffisante</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Trop de monde</label>
+          <input type="checkbox" id="probleme-monde" />
+          <label for="probleme-monde">Trop de monde</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Difficulté d’accès (PMR, horaires)</label>
+          <input type="checkbox" id="probleme-acces" />
+          <label for="probleme-acces">Difficulté d'accès (PMR, horaires)</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Manque de sécurité</label>
+          <input type="checkbox" id="probleme-securite" />
+          <label for="probleme-securite">Manque de sécurité</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Pollution</label>
+          <input type="checkbox" id="probleme-pollution" />
+          <label for="probleme-pollution">Pollution</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Aucun problème</label>
+          <input type="checkbox" id="probleme-aucun" />
+          <label for="probleme-aucun">Aucun problème</label>
         </div>
       </div>
+
+      <!-- Question 10 : Favorable au développement -->
       <div class="question">
         <h2>
           Seriez-vous favorable à un développement accru des transports non
           polluants ?
         </h2>
         <div class="question_checkbox">
-          <input type="radio" name="7"/>
-          <label for="">Oui absolument</label>
+          <input type="radio" name="favorable" id="favorable-oui-absolument" />
+          <label for="favorable-oui-absolument">Oui absolument</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="7"/>
-          <label for="">Plutôt oui</label>
+          <input type="radio" name="favorable" id="favorable-plutot-oui" />
+          <label for="favorable-plutot-oui">Plutôt oui</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="7"/>
-          <label for="">Plutôt non</label>
+          <input type="radio" name="favorable" id="favorable-plutot-non" />
+          <label for="favorable-plutot-non">Plutôt non</label>
         </div>
         <div class="question_checkbox">
-          <input type="radio" name="7"/>
-          <label for="">Non</label>
+          <input type="radio" name="favorable" id="favorable-non" />
+          <label for="favorable-non">Non</label>
         </div>
       </div>
+
+      <!-- Question 11 : Améliorations souhaitées -->
       <div class="question">
         <h2>
-          Quelles améliorations encourageraient l’usage de moyens non polluants
+          Quelles améliorations encourageraient l'usage de moyens non polluants
           ?
         </h2>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Plus de pistes cyclables</label>
+          <input type="checkbox" id="amelio-pistes" />
+          <label for="amelio-pistes">Plus de pistes cyclables</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Meilleure sécurité</label>
+          <input type="checkbox" id="amelio-securite" />
+          <label for="amelio-securite">Meilleure sécurité</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Tarifs plus bas</label>
+          <input type="checkbox" id="amelio-tarifs" />
+          <label for="amelio-tarifs">Tarifs plus bas</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Plus de stations / bornes</label>
+          <input type="checkbox" id="amelio-stations" />
+          <label for="amelio-stations">Plus de stations / bornes</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Plus de vélos / trottinettes disponibles</label>
+          <input type="checkbox" id="amelio-disponibilite" />
+          <label for="amelio-disponibilite">Plus de vélos / trottinettes disponibles</label>
         </div>
         <div class="question_checkbox">
-          <input type="checkbox" />
-          <label for="">Information plus claire</label>
+          <input type="checkbox" id="amelio-info" />
+          <label for="amelio-info">Information plus claire</label>
         </div>
       </div>
     </main>
     <footer>
       <ul>
-        <li>Polsinelli Johan</li>
-        <li>Polsinelli Johan</li>
-        <li>Polsinelli Johan</li>
-        <li>Polsinelli Johan</li>
-        <li>Polsinelli Johan</li>
+          <li>Polsinelli Johan</li>
+          <li>Meefoumane Nzame Murielle</li>
+          <li>RAHARISON Leong Yao Sing Yann</li>
+          <li>Gakaeva Amina</li>
+          <li>BASTRYHA Iryna</li>
       </ul>
     </footer>
   </body>

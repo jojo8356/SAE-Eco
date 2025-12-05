@@ -1,73 +1,164 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-    <title>Accueil</title>
-    <!--Fonts-->
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <!-- Feuille de style pour l'impression -->
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <title>Accueil - Nice Green</title>
+    <!-- Police Google Fonts Inter -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- ==================== EN-TÊTE ==================== -->
     <header>
+      <!-- Logo du site -->
       <p id="logo">Nice Green</p>
+      <!-- Menu de navigation principal -->
       <ul id="menu">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="./questionnaire.html">Questionnaire</a></li>
-        <li><a href="#">Statistiques</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="questionnaire.html">Questionnaire</a></li>
+        <li><a href="statistiques.html">Statistiques</a></li>
         <li><a href="#">Analyse</a></li>
         <li><a href="#">Réponses</a></li>
       </ul>
     </header>
-    <main>
-      <div id="landing">
-        <h1>Enquête des transports non polluants dans la ville de nice</h1>
-        <div id="box-map">
-          <p id="subtitle">
-            Vous pouvez voir la carte complète des transports en communs
+
+    <!-- ==================== CONTENU PRINCIPAL ==================== -->
+    <main class="home-page">
+      <!-- Section Hero avec image de fond -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Enquête sur les transports non polluants à Nice</h1>
+          <p class="hero-subtitle">
+            Découvrez les habitudes de mobilité des Niçois et participez à notre enquête
           </p>
-          <a
-            id="map"
-            target="_blank"
-            href="https://www.lignesdazur.com/uploads/secteur_1_nice_09_2025_web_1939441935.pdf"
-            >ici</a
-          >
+          <div class="hero-buttons">
+            <a href="questionnaire.html" class="btn btn-primary">Participer à l'enquête</a>
+            <a href="statistiques.html" class="btn btn-secondary">Voir les résultats</a>
+          </div>
         </div>
-        <img src="images/tram.jpg" alt="Image Pub Tram Nice" />
-      </div>
-      <div id="methods">
-        <h2>Façon de collecter des données</h2>
-        <ul>
-          <li>Questionnaire en ligne</li>
-          <li>Micro-trottoire</li>
-          <li>longue interview</li>
-          <li>Recherche en ligne</li>
-        </ul>
-      </div>
-      <div id="personnes">
-        <h2>Team du projet</h2>
-        <ul>
-          <li>Polsinelli Johan</li>
-          <li>Polsinelli Johan</li>
-          <li>Polsinelli Johan</li>
-          <li>Polsinelli Johan</li>
-          <li>Polsinelli Johan</li>
-        </ul>
-      </div>
-      <div id="info_dev">
-        <p>Le créateur du générateur de données est Polsinelli Johan</p>
-      </div>
+        <div class="hero-image">
+          <img src="img/tram.jpg" alt="Tramway de Nice" />
+        </div>
+      </section>
+
+      <!-- Section caractéristiques -->
+      <section class="features">
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>384 réponses</h3>
+          <p>Personnes ont déjà participé à notre enquête</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚋</div>
+          <h3>10 transports</h3>
+          <p>Moyens de déplacement analysés dans l'étude</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌱</div>
+          <h3>Écologique</h3>
+          <p>Focus sur les transports non polluants</p>
+        </div>
+      </section>
+
+      <!-- Section méthodes de collecte de données -->
+      <section class="methods-section">
+        <h2>Notre méthodologie</h2>
+        <p class="section-subtitle">Comment nous collectons les données</p>
+        <div class="methods-grid">
+          <div class="method-item">
+            <span class="method-number">01</span>
+            <h4>Questionnaire en ligne</h4>
+            <p>Formulaire accessible à tous les habitants et visiteurs de Nice</p>
+          </div>
+          <div class="method-item">
+            <span class="method-number">02</span>
+            <h4>Micro-trottoir</h4>
+            <p>Interviews spontanées dans les rues de Nice</p>
+          </div>
+          <div class="method-item">
+            <span class="method-number">03</span>
+            <h4>Entretiens approfondis</h4>
+            <p>Discussions détaillées avec des usagers réguliers</p>
+          </div>
+          <div class="method-item">
+            <span class="method-number">04</span>
+            <h4>Recherche documentaire</h4>
+            <p>Analyse des données officielles et études existantes</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lien vers la carte -->
+      <section class="map-section">
+        <div class="map-content">
+          <h2>Carte des transports</h2>
+          <p>Consultez la carte complète du réseau de transports en commun de Nice</p>
+          <a
+            href="https://www.lignesdazur.com/uploads/secteur_1_nice_09_2025_web_1939441935.pdf"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Voir la carte PDF
+          </a>
+        </div>
+      </section>
+
+      <!-- Section équipe du projet -->
+      <section class="team-section">
+        <h2>Notre équipe</h2>
+        <p class="section-subtitle">Les membres du projet SAE S106</p>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-avatar">JP</div>
+            <span class="member-name">Polsinelli Johan</span>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar">MN</div>
+            <span class="member-name">Meefoumane Nzame Murielle</span>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar">RY</div>
+            <span class="member-name">RAHARISON Leong Yao Sing Yann</span>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar">GA</div>
+            <span class="member-name">Gakaeva Amina</span>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar">BI</div>
+            <span class="member-name">BASTRYHA Iryna</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bandeau créateur -->
+      <section class="creator-banner">
+        <div class="creator-content">
+          <div class="creator-icon">💻</div>
+          <div class="creator-text">
+            <span class="creator-label">Développeur du générateur de données</span>
+            <span class="creator-name">Polsinelli Johan</span>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- ==================== PIED DE PAGE ==================== -->
     <footer>
+      <!-- Liste des membres de l'équipe -->
       <ul>
         <li>Polsinelli Johan</li>
-        <li>Polsinelli Johan</li>
-        <li>Polsinelli Johan</li>
-        <li>Polsinelli Johan</li>
-        <li>Polsinelli Johan</li>
+        <li>Meefoumane Nzame Murielle</li>
+        <li>RAHARISON Leong Yao Sing Yann</li>
+        <li>Gakaeva Amina</li>
+        <li>BASTRYHA Iryna</li>
       </ul>
     </footer>
   </body>
