@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <!-- Feuille de style pour l'impression -->
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <title>Méthodologie - Nice Green</title>
+    <!-- Police Google Fonts Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ==================== EN-TÊTE ==================== -->
+    <header>
+      <!-- Logo du site -->
+      <p id="logo">Nice Green</p>
+      <!-- Menu de navigation principal -->
+      <ul id="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="questionnaire.html">Questionnaire</a></li>
+        <li><a href="statistiques.html">Statistiques</a></li>
+        <li><a href="methodologie.html">Méthodologie</a></li>
+        <li><a href="reponses.html">Réponses</a></li>
+      </ul>
+    </header>
+
+    <!-- ==================== CONTENU PRINCIPAL ==================== -->
+    <main id="methodologie-page">
+      <div class="methodologie-wrapper">
+        <h1>Méthodologie de l'enquête</h1>
+
+        <div class="methodo-intro">
+          <p>
+            Dans le cadre de notre étude sur le développement des transports non polluants à Nice,
+            nous avons mis en place une enquête rigoureuse auprès des habitants et visiteurs de la ville.
+            Cette page présente la méthodologie complète de notre démarche d'enquête.
+          </p>
+        </div>
+
+        <!-- Section 1 : Justification de la méthode -->
+        <section class="methodo-section">
+          <h2>1. Méthode de recueil des données</h2>
+
+          <div class="methodo-card">
+            <h3>Méthodes utilisées</h3>
+            <p>
+              Pour garantir la fiabilité et la représentativité de notre étude, nous avons combiné
+              plusieurs méthodes complémentaires de collecte de données :
+            </p>
+            <ul>
+              <li><strong>Questionnaire en ligne :</strong> Accessible via notre site web, permettant une diffusion large et un traitement automatisé des réponses.</li>
+              <li><strong>Micro-trottoir :</strong> Interviews spontanées dans les lieux de passage (centre-ville, Promenade des Anglais, gares) pour capter les avis spontanés.</li>
+              <li><strong>Entretiens approfondis :</strong> Discussions détaillées avec des usagers réguliers des transports pour comprendre leurs besoins spécifiques.</li>
+              <li><strong>Recherche documentaire :</strong> Analyse des données officielles (Métropole Nice Côte d'Azur, Lignes d'Azur) et études existantes.</li>
+            </ul>
+          </div>
+
+          <div class="methodo-card">
+            <h3>Justification du choix</h3>
+            <p>
+              Cette approche mixte (quantitative et qualitative) permet de :
+            </p>
+            <ul>
+              <li>Obtenir des données statistiques fiables grâce au questionnaire en ligne</li>
+              <li>Capter des témoignages spontanés et authentiques via le micro-trottoir</li>
+              <li>Approfondir la compréhension des besoins grâce aux entretiens</li>
+              <li>Contextualiser nos résultats avec les données officielles existantes</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section 2 : Échantillonnage -->
+        <section class="methodo-section">
+          <h2>2. Méthode d'échantillonnage</h2>
+
+          <div class="methodo-card">
+            <h3>Taille de l'échantillon</h3>
+            <p>
+              <strong>Objectif fixé :</strong> 384 réponses
+            </p>
+            <p>
+              Cette taille d'échantillon a été calculée selon la formule statistique standard pour une population de Nice
+              (environ 340 000 habitants) avec :
+            </p>
+            <ul>
+              <li>Niveau de confiance : 95%</li>
+              <li>Marge d'erreur : ± 5%</li>
+              <li>Proportion estimée : 50% (choix le plus conservateur)</li>
+            </ul>
+            <p class="formula">
+              Formule : n = (Z² × p × (1-p)) / e²<br>
+              n = (1,96² × 0,5 × 0,5) / 0,05² ≈ 384 répondants
+            </p>
+          </div>
+
+          <div class="methodo-card">
+            <h3>Mode d'élaboration de l'échantillon</h3>
+            <p>
+              Nous avons utilisé un <strong>échantillonnage aléatoire stratifié</strong> pour garantir la représentativité
+              de notre échantillon :
+            </p>
+            <h4>Critères de stratification :</h4>
+            <ul>
+              <li><strong>Statut :</strong> Habitants (≈52%) / Touristes (≈48%)</li>
+              <li><strong>Âge :</strong> Répartition équilibrée entre les tranches d'âge (moins de 18 ans, 18-25 ans, 26-40 ans, 41-60 ans)</li>
+              <li><strong>Situation professionnelle :</strong> Étudiants, salariés, retraités, sans emploi</li>
+              <li><strong>Géographie :</strong> Diversification des lieux de collecte (centre, périphérie, zones touristiques)</li>
+            </ul>
+            <h4>Méthode de recrutement :</h4>
+            <ul>
+              <li>Diffusion du questionnaire en ligne via les réseaux sociaux et sites municipaux</li>
+              <li>Sollicitation aléatoire dans les lieux publics pour le micro-trottoir</li>
+              <li>Recrutement ciblé pour les entretiens approfondis (usagers quotidiens des transports)</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section 3 : Structure du questionnaire -->
+        <section class="methodo-section">
+          <h2>3. Structure et forme des questions</h2>
+
+          <div class="methodo-card">
+            <h3>Typologie des questions</h3>
+            <p>
+              Notre questionnaire comporte 11 questions réparties en trois catégories :
+            </p>
+
+            <h4>A) Questions de profil (Questions 1-3)</h4>
+            <ul>
+              <li><strong>Type :</strong> Questions fermées à choix unique</li>
+              <li><strong>Objectif :</strong> Identifier le profil du répondant (statut, âge, situation)</li>
+              <li><strong>Justification :</strong> Permettre une analyse segmentée des résultats</li>
+            </ul>
+
+            <h4>B) Questions sur les usages actuels (Questions 4-7)</h4>
+            <ul>
+              <li><strong>Type :</strong> Questions fermées (choix unique ou multiple)</li>
+              <li><strong>Objectif :</strong> Comprendre les habitudes de mobilité actuelles</li>
+              <li><strong>Justification :</strong> Identifier les modes de transport privilégiés et les raisons de ces choix</li>
+            </ul>
+
+            <h4>C) Questions évaluatives et prospectives (Questions 8-11)</h4>
+            <ul>
+              <li><strong>Type :</strong> Questions d'évaluation (échelle de satisfaction) et questions à choix multiple</li>
+              <li><strong>Objectif :</strong> Évaluer la satisfaction actuelle et identifier les attentes</li>
+              <li><strong>Justification :</strong> Orienter les solutions à proposer</li>
+            </ul>
+          </div>
+
+          <div class="methodo-card">
+            <h3>Justification de la forme des questions</h3>
+            <ul>
+              <li>
+                <strong>Questions fermées :</strong> Facilitent le traitement statistique et garantissent la comparabilité des réponses.
+                Elles permettent une analyse quantitative rigoureuse.
+              </li>
+              <li>
+                <strong>Choix multiples (Question 5, 9, 11) :</strong> Reflètent la réalité d'usage (plusieurs modes de transport,
+                plusieurs problèmes rencontrés) tout en restant exploitables statistiquement.
+              </li>
+              <li>
+                <strong>Échelles d'évaluation :</strong> Permettent de mesurer le degré de satisfaction et d'adhésion
+                de manière nuancée.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section 4 : Utilité des réponses -->
+        <section class="methodo-section">
+          <h2>4. Utilité des réponses pour le projet</h2>
+
+          <div class="methodo-card">
+            <h3>Exploitation des données collectées</h3>
+            <p>
+              Chaque question du questionnaire répond à un objectif spécifique pour notre projet :
+            </p>
+
+            <table class="utilite-table">
+              <thead>
+                <tr>
+                  <th>Question</th>
+                  <th>Utilité pour le projet</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Q1-Q3 (Profil)</td>
+                  <td>Adapter les solutions proposées aux différentes catégories d'usagers (étudiants, touristes, actifs, etc.)</td>
+                </tr>
+                <tr>
+                  <td>Q4 (Fréquence)</td>
+                  <td>Identifier l'intensité d'usage et prioriser les solutions pour les usagers réguliers</td>
+                </tr>
+                <tr>
+                  <td>Q5 (Moyens utilisés)</td>
+                  <td>Comprendre les parts modales actuelles et identifier les modes à développer ou remplacer</td>
+                </tr>
+                <tr>
+                  <td>Q6 (Fréquence TC)</td>
+                  <td>Mesurer l'utilisation des transports en commun et identifier le potentiel de développement</td>
+                </tr>
+                <tr>
+                  <td>Q7 (Raisons du choix)</td>
+                  <td>Comprendre les critères de choix pour proposer des solutions attractives</td>
+                </tr>
+                <tr>
+                  <td>Q8 (Qualité TC)</td>
+                  <td>Évaluer la satisfaction actuelle et identifier les axes d'amélioration prioritaires</td>
+                </tr>
+                <tr>
+                  <td>Q9 (Problèmes)</td>
+                  <td>Identifier les freins à l'usage des transports en commun pour y apporter des solutions ciblées</td>
+                </tr>
+                <tr>
+                  <td>Q10 (Favorable)</td>
+                  <td>Mesurer l'acceptabilité sociale des transports non polluants</td>
+                </tr>
+                <tr>
+                  <td>Q11 (Améliorations)</td>
+                  <td>Prioriser les investissements selon les attentes exprimées par les usagers</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="methodo-card">
+            <h3>Lien avec les solutions proposées</h3>
+            <p>
+              Les résultats de l'enquête ont directement alimenté nos propositions de solutions :
+            </p>
+            <ul>
+              <li>
+                <strong>Développement du vélo :</strong> Justifié par les demandes d'amélioration des pistes cyclables
+                et la volonté de modes actifs exprimée dans les réponses
+              </li>
+              <li>
+                <strong>Renforcement des transports en commun :</strong> Répond aux problèmes de fréquence et de couverture
+                territoriale identifiés
+              </li>
+              <li>
+                <strong>Solutions pour touristes :</strong> Adaptation aux besoins spécifiques de cette population importante à Nice
+              </li>
+              <li>
+                <strong>Amélioration de l'information :</strong> Solution priorisée car identifiée comme amélioration souhaitée n°1
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section 5 : Limites et biais -->
+        <section class="methodo-section">
+          <h2>5. Limites et biais de l'étude</h2>
+
+          <div class="methodo-card">
+            <h3>Biais identifiés</h3>
+            <ul>
+              <li>
+                <strong>Biais de sélection :</strong> Le questionnaire en ligne peut surreprésenter les jeunes
+                et les personnes à l'aise avec le numérique
+              </li>
+              <li>
+                <strong>Biais de désirabilité sociale :</strong> Tendance à surévaluer l'intérêt pour les transports
+                écologiques
+              </li>
+              <li>
+                <strong>Biais temporel :</strong> Les réponses peuvent varier selon la saison (période touristique ou non)
+              </li>
+            </ul>
+          </div>
+
+          <div class="methodo-card">
+            <h3>Mesures correctives</h3>
+            <ul>
+              <li>Combinaison de plusieurs méthodes (online + micro-trottoir) pour diversifier les profils</li>
+              <li>Questions neutres et factuelles pour limiter la désirabilité sociale</li>
+              <li>Collecte étalée sur plusieurs semaines pour lisser les variations temporelles</li>
+              <li>Comparaison avec les données officielles existantes pour validation</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ==================== PIED DE PAGE ==================== -->
+    <footer>
+      <!-- Liste des membres de l'équipe -->
+      <ul>
+        <li>Polsinelli Johan</li>
+        <li>Meefoumane Nzame Murielle</li>
+        <li>RAHARISON Leong Yao Sing Yann</li>
+        <li>Gakaeva Amina</li>
+        <li>BASTRYHA Iryna</li>
+      </ul>
+    </footer>
+  </body>
+</html>

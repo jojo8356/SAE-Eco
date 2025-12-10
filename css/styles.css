@@ -7,12 +7,48 @@
 /* --- VARIABLES CSS --- */
 /* Définition des couleurs et polices utilisées sur tout le site */
 :root {
-  --primary-bg: #05df72;           /* Couleur de fond principale (vert vif) */
-  --primary-color: #00c951;        /* Couleur principale pour les accents */
-  --main-fonts: "Inter", Arial, Helvetica, sans-serif;  /* Police principale */
-  --gap-home: 5vh;                 /* Espacement standard entre sections */
-  --info-color: #00a6f4;           /* Couleur pour les encarts informatifs (bleu) */
-  --info-bg-color: #dff2fe;        /* Fond des encarts informatifs */
+  --primary-bg: #05df72; /* Couleur de fond principale (vert vif) */
+  --primary-color: #00c951; /* Couleur principale pour les accents */
+  --main-fonts: "Inter", Arial, Helvetica, sans-serif; /* Police principale */
+  --gap-home: 5vh; /* Espacement standard entre sections */
+  --info-color: #00a6f4; /* Couleur pour les encarts informatifs (bleu) */
+  --info-bg-color: #dff2fe; /* Fond des encarts informatifs */
+
+  /* Variables pour la page Méthodologie (thème bleu) */
+  --methodo-primary: #1565c0; /* Bleu foncé principal */
+  --methodo-secondary: #42a5f5; /* Bleu clair */
+  --methodo-accent: #1e88e5; /* Bleu moyen */
+  --methodo-bg-light: #e3f2fd; /* Fond bleu très clair */
+  --methodo-bg-lighter: #bbdefb; /* Fond bleu clair */
+  --methodo-bg-lightest: #e1f5fe; /* Fond bleu ultra-clair */
+
+  /* Variables pour la page Statistiques */
+  --stats-bg-light: #f8f9fa; /* Fond gris clair */
+  --stats-bg-card: #ffffff; /* Fond des cartes */
+  --stats-border: #eee; /* Bordure */
+  --stats-text: #333; /* Texte principal */
+  --stats-text-light: #555; /* Texte secondaire */
+  --stats-positive: #2e7d32; /* Vert pour positif */
+  --stats-positive-bg: #e8f5e9; /* Fond vert clair */
+  --stats-neutral: #1565c0; /* Bleu pour neutre */
+  --stats-neutral-bg: #e3f2fd; /* Fond bleu clair */
+  --stats-warning: #ef6c00; /* Orange pour attention */
+  --stats-warning-bg: #fff3e0; /* Fond orange clair */
+  --stats-negative: #c62828; /* Rouge pour négatif */
+  --stats-negative-bg: #ffebee; /* Fond rouge clair */
+  --stats-problem-primary: #ff6b6b; /* Rouge problème */
+  --stats-problem-secondary: #ee5a5a; /* Rouge problème foncé */
+  --stats-problem-bg: #fff5f5; /* Fond rouge très clair */
+
+  /* Variables pour la page Réponses */
+  --reponses-bg: #f8faf9; /* Fond général */
+  --reponses-card-bg: #ffffff; /* Fond des cartes */
+  --reponses-text: #555; /* Texte principal */
+  --reponses-text-secondary: #666; /* Texte secondaire */
+  --reponses-border: #e8f5e9; /* Bordure claire */
+  --reponses-highlight-bg: #e8f5e9; /* Fond surbrillance vert clair */
+  --reponses-highlight-border: var(--primary-color); /* Bordure surbrillance */
+  --reponses-highlight-text: #166534; /* Texte surbrillance */
 }
 
 /* --- RESET CSS --- */
@@ -22,7 +58,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;         /* Inclut padding et border dans la largeur */
+  box-sizing: border-box; /* Inclut padding et border dans la largeur */
   font-family: var(--main-fonts);
 }
 
@@ -44,16 +80,16 @@ h1 {
 header {
   display: flex;
   background-color: var(--primary-bg);
-  justify-content: space-around;  /* Espace uniforme entre logo et menu */
+  justify-content: space-around; /* Espace uniforme entre logo et menu */
   padding: 10px 0px;
 }
 
 /* Menu de navigation horizontal */
 #menu {
   display: flex;
-  list-style-type: none;          /* Supprime les puces */
+  list-style-type: none; /* Supprime les puces */
   justify-content: space-between;
-  gap: 3vw;                       /* Espacement responsive entre items */
+  gap: 3vw; /* Espacement responsive entre items */
   align-items: center;
 }
 
@@ -68,7 +104,7 @@ header {
 #logo {
   color: #fff;
   font-size: 26px;
-  font-weight: 800;               /* Gras pour le logo */
+  font-weight: 800; /* Gras pour le logo */
 }
 
 /* --- CONTENU PRINCIPAL (MAIN) --- */
@@ -336,6 +372,8 @@ main > * {
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  width: 150px;
+  min-width: 150px;
 }
 
 .member-avatar {
@@ -360,8 +398,9 @@ main > * {
   color: #333;
   font-size: 14px;
   font-weight: 500;
-  max-width: 150px;
+  width: 100%;
   text-align: center;
+  word-wrap: break-word;
 }
 
 /* --- BANDEAU CRÉATEUR --- */
@@ -425,7 +464,7 @@ main > * {
 
 /* Style global des listes à puces */
 ul {
-  list-style-position: inside;    /* Puces à l'intérieur du conteneur */
+  list-style-position: inside; /* Puces à l'intérieur du conteneur */
 }
 
 /* Taille du texte des méthodes */
@@ -452,14 +491,14 @@ ul {
   flex-direction: column;
   gap: 12px;
   font-size: 22px;
-  list-style: none;               /* Pas de puces */
+  list-style: none; /* Pas de puces */
 }
 
 /* Noms des membres soulignés */
 #personnes > ul > li {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 3px;     /* Espace entre texte et soulignement */
+  text-underline-offset: 3px; /* Espace entre texte et soulignement */
 }
 
 /* Titre de la section équipe */
@@ -505,7 +544,7 @@ footer > ul {
 
 /* Fond de la page questionnaire */
 #questionnaire {
-  background-color: rgba(0, 201, 81, 0.4);  /* Vert transparent */
+  background-color: rgba(0, 201, 81, 0.4); /* Vert transparent */
 }
 
 /* Titre du questionnaire */
@@ -514,7 +553,7 @@ footer > ul {
   background-color: white;
   padding: 10px 20px;
   margin-top: var(--gap-home);
-  border-top: 8px solid var(--primary-bg);  /* Accent vert en haut */
+  border-top: 8px solid var(--primary-bg); /* Accent vert en haut */
 }
 
 /* --- CARTES DE QUESTIONS --- */
@@ -524,7 +563,7 @@ footer > ul {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  width: 50vw;                    /* 50% de la largeur de l'écran */
+  width: 50vw; /* 50% de la largeur de l'écran */
   gap: 10px;
   border-radius: 8px;
 }
@@ -914,7 +953,7 @@ input[type="checkbox"] {
 
 /* --- CARTES DE STATISTIQUES --- */
 .stats-card {
-  background-color: white;
+  background-color: var(--stats-bg-card);
   border-radius: 15px;
   padding: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -922,11 +961,11 @@ input[type="checkbox"] {
 }
 
 .stats-card > h3 {
-  color: #333;
+  color: var(--stats-text);
   font-size: 18px;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid var(--stats-border);
 }
 
 /* --- BARRES DE PROGRESSION --- */
@@ -945,13 +984,13 @@ input[type="checkbox"] {
 
 .stats-bar-label {
   font-size: 14px;
-  color: #555;
+  color: var(--stats-text-light);
   font-weight: 500;
 }
 
 .stats-bar {
   height: 25px;
-  background-color: #e8f5e9;
+  background-color: var(--stats-positive-bg);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -981,7 +1020,7 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   padding: 12px 15px;
-  background-color: #f8f9fa;
+  background-color: var(--stats-bg-light);
   border-radius: 10px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -1009,7 +1048,7 @@ input[type="checkbox"] {
 .stats-rank-label {
   flex: 1;
   font-size: 15px;
-  color: #333;
+  color: var(--stats-text);
 }
 
 .stats-rank-value {
@@ -1021,20 +1060,24 @@ input[type="checkbox"] {
 
 /* Style spécial pour les problèmes */
 .stats-rank-item.stats-problem {
-  background-color: #fff5f5;
+  background-color: var(--stats-problem-bg);
 }
 
 .stats-rank-item.stats-problem .stats-rank-position {
-  background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+  background: linear-gradient(
+    135deg,
+    var(--stats-problem-primary),
+    var(--stats-problem-secondary)
+  );
 }
 
 .stats-rank-item.stats-problem .stats-rank-value {
-  color: #ee5a5a;
+  color: var(--stats-problem-secondary);
 }
 
 /* Style pour les améliorations */
 .stats-improvements .stats-rank-item {
-  background-color: #e8f5e9;
+  background-color: var(--stats-positive-bg);
 }
 
 /* --- GRILLE DE SATISFACTION --- */
@@ -1066,23 +1109,23 @@ input[type="checkbox"] {
 
 /* Couleurs pour les différents niveaux */
 .stats-positive {
-  background-color: #e8f5e9;
-  color: #2e7d32;
+  background-color: var(--stats-positive-bg);
+  color: var(--stats-positive);
 }
 
 .stats-neutral {
-  background-color: #e3f2fd;
-  color: #1565c0;
+  background-color: var(--stats-neutral-bg);
+  color: var(--stats-neutral);
 }
 
 .stats-warning {
-  background-color: #fff3e0;
-  color: #ef6c00;
+  background-color: var(--stats-warning-bg);
+  color: var(--stats-warning);
 }
 
 .stats-negative {
-  background-color: #ffebee;
-  color: #c62828;
+  background-color: var(--stats-negative-bg);
+  color: var(--stats-negative);
 }
 
 /* ===========================================
@@ -1196,5 +1239,516 @@ input[type="checkbox"] {
 
   .stats-rank-value {
     font-size: 14px;
+  }
+}
+
+/* ===========================================
+   STYLES SPÉCIFIQUES À LA PAGE RÉPONSES
+   =========================================== */
+
+/* --- PAGE RÉPONSES --- */
+#reponses-page {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: var(--reponses-bg);
+}
+
+/* Wrapper centré à 70% de la largeur */
+.reponses-wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reponses-wrapper > h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+/* Introduction générale */
+.reponses-intro {
+  background: var(--reponses-card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.reponses-intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--reponses-text);
+  text-align: justify;
+}
+
+/* --- SECTIONS DE SOLUTIONS --- */
+.solution-section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.solution-section > h2 {
+  color: var(--primary-color);
+  font-size: 28px;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--primary-bg);
+}
+
+.solution-intro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--reponses-text-secondary);
+  margin-bottom: 25px;
+  padding-left: 10px;
+  border-left: 4px solid var(--primary-bg);
+  padding: 15px;
+  background: var(--reponses-card-bg);
+  border-radius: 10px;
+}
+
+/* --- CARTES DE SOLUTIONS --- */
+.solution-card {
+  background-color: var(--reponses-card-bg);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.solution-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.solution-card > h3 {
+  color: var(--primary-color);
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--reponses-border);
+}
+
+.solution-card > h4 {
+  color: var(--stats-text);
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.solution-card > p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--reponses-text);
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.solution-card > ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.solution-card > ul > li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--reponses-text);
+  margin-bottom: 8px;
+}
+
+/* Styles pour les résultats/objectifs */
+.solution-card .objectif,
+.solution-card .resultat,
+.solution-card .interet,
+.solution-card .effets,
+.solution-card .consequence,
+.solution-card .benefices,
+.solution-card .but {
+  background: var(--reponses-highlight-bg);
+  padding: 12px 15px;
+  border-radius: 10px;
+  border-left: 4px solid var(--reponses-highlight-border);
+  margin-top: 15px;
+  font-size: 14px;
+  color: var(--reponses-highlight-text);
+}
+
+/* ===========================================
+   RESPONSIVE POUR LA PAGE RÉPONSES
+   =========================================== */
+
+@media screen and (max-width: 1024px) {
+  .reponses-wrapper {
+    width: 85%;
+  }
+
+  .solution-section > h2 {
+    font-size: 24px;
+  }
+
+  .solution-card > h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reponses-wrapper {
+    width: 90%;
+  }
+
+  .reponses-wrapper > h1 {
+    font-size: 24px;
+  }
+
+  .solution-section > h2 {
+    font-size: 22px;
+  }
+
+  .solution-card {
+    padding: 20px;
+  }
+
+  .solution-card > h3 {
+    font-size: 17px;
+  }
+
+  .solution-card > h4 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .reponses-wrapper {
+    width: 95%;
+  }
+
+  #reponses-page {
+    padding: 10px;
+  }
+
+  .reponses-wrapper > h1 {
+    font-size: 20px;
+  }
+
+  .reponses-intro {
+    padding: 15px;
+  }
+
+  .solution-section > h2 {
+    font-size: 20px;
+  }
+
+  .solution-card {
+    padding: 15px;
+  }
+
+  .solution-card > h3 {
+    font-size: 16px;
+  }
+
+  .solution-intro {
+    padding: 12px;
+  }
+}
+
+/* ===========================================
+   STYLES SPÉCIFIQUES À LA PAGE MÉTHODOLOGIE
+   =========================================== */
+
+/* --- PAGE MÉTHODOLOGIE --- */
+#methodologie-page {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    var(--methodo-bg-light) 0%,
+    var(--methodo-bg-lighter) 50%,
+    var(--methodo-bg-lightest) 100%
+  );
+}
+
+/* Wrapper centré à 70% de la largeur */
+.methodologie-wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.methodologie-wrapper > h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  color: var(--methodo-primary);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-size: 40px;
+}
+
+/* Introduction */
+.methodo-intro {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(21, 101, 192, 0.15);
+  margin-bottom: 40px;
+  width: 100%;
+  border: 2px solid var(--methodo-secondary);
+}
+
+.methodo-intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+/* --- SECTIONS DE MÉTHODOLOGIE --- */
+.methodo-section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.methodo-section > h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  background: var(--methodo-accent);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(66, 165, 245, 0.3);
+  border-left: 6px solid var(--methodo-primary);
+}
+
+/* --- CARTES MÉTHODOLOGIE --- */
+.methodo-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(30, 136, 229, 0.15);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--methodo-bg-lighter);
+  position: relative;
+  overflow: hidden;
+}
+
+.methodo-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--methodo-secondary);
+}
+
+.methodo-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(30, 136, 229, 0.25);
+  border-color: var(--methodo-secondary);
+}
+
+.methodo-card > h3 {
+  color: var(--methodo-primary);
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--methodo-bg-lighter);
+  padding-left: 15px;
+}
+
+.methodo-card > h4 {
+  color: var(--methodo-accent);
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  padding-left: 15px;
+}
+
+.methodo-card > p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify;
+  padding-left: 15px;
+}
+
+.methodo-card > ul {
+  margin-left: 35px;
+  margin-bottom: 15px;
+}
+
+.methodo-card > ul > li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.methodo-card > ul > li::marker {
+  color: var(--methodo-secondary);
+}
+
+.methodo-card > ul > li strong {
+  color: var(--methodo-primary);
+  font-weight: 700;
+}
+
+/* Formule mathématique */
+.formula {
+  background: var(--methodo-bg-light);
+  padding: 15px;
+  border-radius: 12px;
+  border-left: 5px solid var(--methodo-secondary);
+  border-right: 5px solid var(--methodo-secondary);
+  margin: 15px 0;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: var(--methodo-primary);
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(66, 165, 245, 0.2);
+}
+
+/* Tableau d'utilité */
+.utilite-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.utilite-table thead {
+  background: var(--methodo-accent);
+  color: white;
+}
+
+.utilite-table th,
+.utilite-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid var(--methodo-bg-lighter);
+}
+
+.utilite-table th {
+  font-weight: 600;
+  font-size: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.utilite-table td {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.utilite-table tbody tr:nth-child(even) {
+  background-color: var(--methodo-bg-light);
+}
+
+.utilite-table tbody tr:hover {
+  background: var(--methodo-bg-light);
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+/* ===========================================
+   RESPONSIVE POUR LA PAGE MÉTHODOLOGIE
+   =========================================== */
+
+@media screen and (max-width: 1024px) {
+  .methodologie-wrapper {
+    width: 85%;
+  }
+
+  .methodo-section > h2 {
+    font-size: 24px;
+  }
+
+  .methodo-card > h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .methodologie-wrapper {
+    width: 90%;
+  }
+
+  .methodologie-wrapper > h1 {
+    font-size: 24px;
+  }
+
+  .methodo-section > h2 {
+    font-size: 22px;
+  }
+
+  .methodo-card {
+    padding: 20px;
+  }
+
+  .methodo-card > h3 {
+    font-size: 17px;
+  }
+
+  .methodo-card > h4 {
+    font-size: 15px;
+  }
+
+  .utilite-table {
+    font-size: 12px;
+  }
+
+  .utilite-table th,
+  .utilite-table td {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .methodologie-wrapper {
+    width: 95%;
+  }
+
+  #methodologie-page {
+    padding: 10px;
+  }
+
+  .methodologie-wrapper > h1 {
+    font-size: 20px;
+  }
+
+  .methodo-intro {
+    padding: 15px;
+  }
+
+  .methodo-section > h2 {
+    font-size: 20px;
+  }
+
+  .methodo-card {
+    padding: 15px;
+  }
+
+  .methodo-card > h3 {
+    font-size: 16px;
+  }
+
+  /* Tableau responsive */
+  .utilite-table {
+    display: block;
+    overflow-x: auto;
   }
 }
